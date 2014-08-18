@@ -18,6 +18,7 @@ class SolrDocument
   include OpenSeadragon
   include SolrHoldings
   include MarcInstrumentation
+  include MarcRelatedWorks
 
   include Blacklight::Solr::Document
 

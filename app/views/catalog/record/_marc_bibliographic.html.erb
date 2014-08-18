@@ -430,6 +430,12 @@
   <%= render_field_from_marc(related_work_799) %>
 <%- end -%>
 
+<% if (related_works = document.marc_related_works).present? %>
+  <% related_works.each do |related_work| %>
+    <%= display_content_field related_work %>
+  <% end %>
+<% end %>
+
 <%- isbn = get_data_with_label(document, "ISBN", 'isbn_display') -%>
 <%- unless isbn.nil? -%>
   <%= render "field_from_index", :fields => isbn %>
