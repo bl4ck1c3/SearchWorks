@@ -45,7 +45,7 @@ group :deployment do
   gem 'capistrano-rvm'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
-  gem 'lyberteam-capistrano-devel'
+  gem 'lyberteam-capistrano-devel', git: 'https://github.com/sul-dlss/lyberteam-capistrano-devel'
 end
 
 group :development, :test do
@@ -69,7 +69,7 @@ end
 
 gem "coderay"
 
-gem 'openseadragon', github: 'sul-dlss/openseadragon-rails', branch: 'ff36-fix'
+gem 'openseadragon', git: 'https://github.com/sul-dlss/openseadragon-rails', branch: 'ff36-fix'
 
 gem 'deprecation'
 
@@ -82,11 +82,11 @@ gem "blacklight-marc", "~> 5.0"
 gem "faraday"
 gem "rails_config"
 gem "mods_display", "0.3.3"
-gem "blacklight-gallery", github: 'projectblacklight/blacklight-gallery'
-gem "blacklight_advanced_search", github: 'projectblacklight/blacklight_advanced_search'
+gem "blacklight-gallery", git: 'https://github.com/projectblacklight/blacklight-gallery'
+gem "blacklight_advanced_search", git: 'https://github.com/projectblacklight/blacklight_advanced_search'
 gem "font-awesome-sass"
-gem "blacklight_range_limit", github: 'projectblacklight/blacklight_range_limit'
-gem 'blacklight-hierarchy', github: 'sul-dlss/blacklight-hierarchy', branch: 'blacklight5'
+gem "blacklight_range_limit", git: 'https://github.com/projectblacklight/blacklight_range_limit'
+gem 'blacklight-hierarchy', git: 'https://github.com/sul-dlss/blacklight-hierarchy', branch: 'blacklight5'
 gem "retina_tag"
 gem 'jquery-datatables-rails', '~> 2.2.1'
 gem 'roadie-rails', '~> 1.0.3'
