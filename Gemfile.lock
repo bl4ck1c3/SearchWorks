@@ -25,15 +25,6 @@ GIT
       rails (>= 3.0, < 5.0)
 
 GIT
-  remote: git://github.com/sul-dlss/blacklight-hierarchy.git
-  revision: 2e686883a66f39871033fb88216385e3d32fb586
-  branch: blacklight5
-  specs:
-    blacklight-hierarchy (1.0.0)
-      blacklight (~> 5, < 6)
-      rails (~> 4.1)
-
-GIT
   remote: git://github.com/sul-dlss/openseadragon-rails.git
   revision: 9baa6dce49555c9b6c3cc1d650f14499b7cdd23c
   branch: ff36-fix
@@ -80,6 +71,9 @@ GEM
       nokogiri (~> 1.6)
       rails (>= 3.2.6, < 5)
       rsolr (~> 1.0.6)
+    blacklight-hierarchy (0.1.0)
+      blacklight (~> 5, < 6)
+      rails (~> 4.1)
     blacklight-marc (5.4.0)
       blacklight (>= 5.4.0.rc1, < 6.0)
       marc (>= 0.4.3, < 1.1)
@@ -345,7 +339,7 @@ PLATFORMS
 DEPENDENCIES
   blacklight (~> 5.7.1)
   blacklight-gallery!
-  blacklight-hierarchy!
+  blacklight-hierarchy (~> 0.1.0)
   blacklight-marc (~> 5.0)
   blacklight_advanced_search!
   blacklight_range_limit!

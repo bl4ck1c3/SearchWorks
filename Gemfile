@@ -86,7 +86,7 @@ gem "blacklight-gallery", github: 'projectblacklight/blacklight-gallery'
 gem "blacklight_advanced_search", github: 'projectblacklight/blacklight_advanced_search'
 gem "font-awesome-sass"
 gem "blacklight_range_limit", github: 'projectblacklight/blacklight_range_limit'
-gem 'blacklight-hierarchy', github: 'sul-dlss/blacklight-hierarchy', branch: 'blacklight5'
+gem 'blacklight-hierarchy', '~> 0.1.0'
 gem "retina_tag"
 gem 'jquery-datatables-rails', '~> 2.2.1'
 gem 'roadie-rails', '~> 1.0.3'
