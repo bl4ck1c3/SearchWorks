@@ -8,7 +8,7 @@ LIVE_LOOKUP_URL: "http://host.example.com/lookup.pl"
 SQUASH_API_HOST: 'http://squash-host.example.com'
 SQUASH_API_KEY: 'squash-api-key'
 SQUASH_DISABLE: <%= (Rails.env.development? || Rails.env.test?) %>
-STACKMAP_API_URL: "http://stanford.stackmap.com/json/"
+STACKMAP_API_URL: "https://stanford.stackmap.com/json/"
 WHEN_TO_PRUNE_DATA: '12:30am'
 NUMBER_OF_DAYS_TO_PRUNE: '7'
 PURL_EMBED_PROVIDER: 'http://embed-service.example.com/embed'
