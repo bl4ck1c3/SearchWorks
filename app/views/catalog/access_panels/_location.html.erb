@@ -2,7 +2,7 @@
 <% if document.access_panels.library_locations? %>
   <div data-live-lookup-id="<%= document[:id] %>" data-live-lookup-url="<%= availability_index_path %>">
     <% document.access_panels.library_locations.libraries.each do |library| %>
-      <div class="panel panel-default access-panel panel-library-location availability" <%= "data-hours-route='#{hour_path(library.code)}'".html_safe if library.holding_library? %>>
+      <div class="panel panel-default access-panel panel-library-location" <%= "data-hours-route='#{hour_path(library.code)}'".html_safe if library.holding_library? %>>
         <%= link_to_library_header(library) %>
         <div class="panel-body location">
           <% if document.index_links.finding_aid.present? %>
@@ -41,7 +41,7 @@
                 <% end %>
               <% end %>
             <% end %>
-            <table>
+            <table class='availability record-view'>
               <caption class="sr-only">Items in <%= location.name %></caption>
               <thead>
                 <tr class="sr-only">
@@ -56,9 +56,11 @@
                      <%= item.callnumber %>
                    </td>
                    <td data-live-lookup-id="<%= document[:id] %>" data-status-target=".availability-icon" data-barcode="<%= item.barcode if item.live_status? %>" <%= "data-request-url='#{request_link(document, item, item.barcode)}'".html_safe if item.requestable? && !item.must_request? && !location_level_request_link?(library, location) %>>
-                     <i class="availability-icon <%= item.status.availability_class %>"></i>
-                     <span data-available-text="<%= Constants::TRANSLATE_STATUS['available'] %>" data-unavailable-text="<%= Constants::TRANSLATE_STATUS['unavailable'] %>" class='status-text'>
-                       <%= item.status.status_text unless item.current_location && item.current_location.name.present? %>
+                     <span class="availability-icon-wrapper">
+                       <i class="availability-icon <%= item.status.availability_class %>"></i>
+                       <span data-available-text="<%= Constants::TRANSLATE_STATUS['available'] %>" data-unavailable-text="<%= Constants::TRANSLATE_STATUS['unavailable'] %>" class='status-text'>
+                         <%= item.status.status_text unless item.current_location && item.current_location.name.present? %>
+                       </span>
                      </span>
                      <span class="current-location">
                        <% unless item.treat_current_location_as_home_location? %>

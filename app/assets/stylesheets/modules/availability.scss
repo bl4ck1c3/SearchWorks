@@ -1,4 +1,23 @@
 .availability {
+  width: 100%;
+
+  &.record-view {
+    margin-bottom: 15px;
+  }
+
+  tr td:first-child {
+    width: 60%;
+  }
+
+  td {
+    padding: 2px 5px 5px 0;
+    vertical-align: top;
+  }
+
+  .availability-icon-wrapper {
+    white-space: nowrap;
+  }
+
   .availability-icon {
     width: 1.2em;
   }
